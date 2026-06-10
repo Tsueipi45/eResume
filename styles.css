@@ -170,11 +170,45 @@ h3 {
   line-height: 1.45;
 }
 
+.basic-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+  max-width: 760px;
+  margin-top: 26px;
+}
+
+.basic-info div {
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.basic-info span,
+.basic-info strong {
+  display: block;
+}
+
+.basic-info span {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.basic-info strong {
+  margin-top: 4px;
+  color: #1f2a3a;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
 .contact-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 26px;
+  margin-top: 18px;
 }
 
 .contact-list a,
@@ -703,7 +737,8 @@ h3 {
   }
 
   .contact-list,
-  .action-row {
+  .action-row,
+  .basic-info {
     display: grid;
     grid-template-columns: 1fr;
   }
