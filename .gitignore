@@ -1,0 +1,27 @@
+# Resume/source documents - never publish these.
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+
+# Local exports and generated assets that may contain private resume copies.
+assets/
+output/
+tmp/
+dist/
+build/
+
+# Logs and local server noise.
+*.log
+server.log
+server.err.log
+
+# Editor, OS, and dependency folders.
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
