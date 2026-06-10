@@ -186,6 +186,10 @@ h3 {
   background: #f8fafc;
 }
 
+.basic-info .basic-info-wide {
+  grid-column: 1 / -1;
+}
+
 .basic-info span,
 .basic-info strong {
   display: block;
