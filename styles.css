@@ -636,6 +636,20 @@ h3 {
   background: rgba(82, 96, 112, 0.22);
 }
 
+@media (min-width: 981px) {
+  .two-column > div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  .info-list,
+  .award-list {
+    flex: 1;
+    grid-auto-rows: minmax(0, 1fr);
+  }
+}
+
 .info-list,
 .award-list {
   display: grid;
