@@ -466,22 +466,17 @@ h3 {
 
 .ai-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
 }
 
 .ai-grid article {
-  grid-column: span 2;
   min-width: 0;
   min-height: 220px;
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: linear-gradient(180deg, #ffffff, #f7fbfc);
-}
-
-.ai-grid article:nth-child(n + 4) {
-  grid-column: span 3;
 }
 
 .ai-grid span {
@@ -496,6 +491,30 @@ h3 {
 .ai-grid p {
   margin: 10px 0 0;
   color: var(--muted);
+}
+
+@media (min-width: 701px) and (max-width: 980px) {
+  .ai-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-grid article:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 981px) {
+  .ai-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .ai-grid article {
+    grid-column: span 2;
+  }
+
+  .ai-grid article:nth-child(n + 4) {
+    grid-column: span 3;
+  }
 }
 
 .project-head {
@@ -696,17 +715,8 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .skill-grid,
-  .ai-grid {
+  .skill-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .ai-grid article {
-    grid-column: auto;
-  }
-
-  .ai-grid article:last-child {
-    grid-column: 1 / -1;
   }
 
   .two-column::before {
@@ -781,14 +791,8 @@ h3 {
   }
 
   .profile-panel,
-  .skill-grid,
-  .ai-grid {
+  .skill-grid {
     grid-template-columns: 1fr;
-  }
-
-  .ai-grid article,
-  .ai-grid article:last-child {
-    grid-column: auto;
   }
 
   .project-carousel .scroll-button {
