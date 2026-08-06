@@ -466,17 +466,22 @@ h3 {
 
 .ai-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 16px;
 }
 
 .ai-grid article {
+  grid-column: span 2;
   min-width: 0;
   min-height: 220px;
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: linear-gradient(180deg, #ffffff, #f7fbfc);
+}
+
+.ai-grid article:nth-child(n + 4) {
+  grid-column: span 3;
 }
 
 .ai-grid span {
@@ -696,6 +701,14 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .ai-grid article {
+    grid-column: auto;
+  }
+
+  .ai-grid article:last-child {
+    grid-column: 1 / -1;
+  }
+
   .two-column::before {
     display: none;
   }
@@ -771,6 +784,11 @@ h3 {
   .skill-grid,
   .ai-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ai-grid article,
+  .ai-grid article:last-child {
+    grid-column: auto;
   }
 
   .project-carousel .scroll-button {
